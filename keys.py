@@ -9,11 +9,11 @@ def generate_key():
         key_size=2048,
     )
 
-    # Assign a key ID and expiry timestamp
+    
     kid = "key_" + str(int(time.time()))
     expiry = time.time() + 3600  # 1 hour expiration
 
-    # Convert keys to PEM format
+    
     private_key = key.private_bytes(
         encoding=serialization.Encoding.PEM,
         format=serialization.PrivateFormat.TraditionalOpenSSL,
